@@ -1,5 +1,5 @@
 /* ------------- BODY ---------------------------------------- */
-/* Define shared styling elements */
+/* Elements that will be shared */
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ h3, h4, b {
     justify-content: flex-end;
 }
 .logo {
-    /* Aligns the logo to the left of the main axis */
+    /* Putting the logo to the left of the main axis */
     margin-right: auto;
     padding-top: 30px;
 }
@@ -49,7 +49,7 @@ h3, h4, b {
     padding-top: 30px;
     border-top: 2px solid white;
     min-width: min-content;
-    /* Sets the same width for the 2 navigation links */
+    /* Nav links will be the same width */
     width: 12%;
 }
 .nav-item:hover {
@@ -58,12 +58,12 @@ h3, h4, b {
 }
 @media all and (max-width: 768px) {
     .logo {
-        /* Logo takes all the space and is centered */
+        /* So I can have the logo centered on smaller screens eg: mobile */
         flex: 1 100%;
         margin-bottom: 20px;
     }
     .nav-item {
-        /* Equally-sized items, even if they start out at different sizes */
+        /* getting the items to equal size after starting out different */
         flex: 1 0;
         padding: 10px 5px;
         border-top: none;
@@ -124,7 +124,7 @@ h3, h4, b {
 .search-form .b-search:hover {
     opacity: 0.8;
 }
-/* On desktop the search button contains only the text "search" */
+/* desktop: search button only has text "search" in it */
 .search-form .b-search i{
     display: none;
 }
@@ -137,7 +137,7 @@ h3, h4, b {
         border-radius: 10px;
         margin-left: auto;
     }
-    /* On mobile the search button contains only a symbol of a magnifying glass */
+    /* mobile: search bar symbol of a magnifying glass */
     .search-form .b-search i {
         display: contents;
     }
@@ -173,12 +173,12 @@ h3, h4, b {
     font-weight: 700;
     font-size: 16px;
 }
-/* Filter border gets darker during mouseover */
+/* darkening upon mouseover on filter bar */
 .filter button:hover {
     border: 2px solid #dfdede;
     border-left: none;
 }
-/* Filter background color change upon selection */
+/* color change when selected on filter bar */
 .filter button:focus {
     background-color: #F2F2F2;
     border-left: none;
@@ -186,7 +186,7 @@ h3, h4, b {
 .filter i {
     background-color: #deebff;
     color: #0065FC;
-    /* Creates centered and rounded icons */
+    /* centered and rounded icons */
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -212,7 +212,7 @@ h3, h4, b {
         width: 100%;
     }
 }
-/* Reoders the filters to take less space */
+/* mobile: Reorders the filters to take less space */
 @media all and (max-width: 768px) {
     .filter h3{
         flex: 1 100%;
@@ -224,17 +224,19 @@ h3, h4, b {
         order: 1;
     }
 }
-/* ------------- MAIN SECTION -------------------------------- */
-/* Encompasses the "Accommodations in Marseille" section (=section-1)
-   and the "Most Popular" section (=section-2) */
-/* ------------- Shared card settings ------------------------ */
+/* ------------- MAIN CENTER SECTION -------------------------------- */
+/* Includes "Accommodations in Marseille" section (=section-1)
+   and the "Most Popular" section (=section-2) all in one */
+/* ------------- Card settings to be shared ------------------------ */
 .card {
     border-radius: 20px;
     box-shadow: 0 0 5px 1px #dfdede;
     background-color: white;
+    transition: transform 0.9s,
 }
 .card:hover {
     box-shadow: 0 0 10px 2px #dfdede;
+    transform: scale(1.1);
 }
 .card a {
     width: 100%;
@@ -251,7 +253,7 @@ h3, h4, b {
 .checked {
     color: #0065FC;
 }
-/* ------------- Specific accommodation card settings -------- */
+/* ------------- Specific accommodation card CSS -------- */
 .Acc {
     width: 250px;
     height: 200px;
@@ -283,7 +285,7 @@ h3, h4, b {
 .Acc .card-body p {
     flex: 0 1 auto;
 }
-/* ------------- Specific most popular card settings --------- */
+/* ------------- most popular card settings --------- */
 .Mp {
     height: 150px;
 }
@@ -312,7 +314,7 @@ h3, h4, b {
     display: flex;
     gap: 28px;
 }
-/* Accommodation section will take 2/3 of the available space */
+/* Accommodation section= to take 2/3 of the available space on page */
 .section-1 {
     margin: 0;
     padding: 0 30px;
@@ -326,6 +328,7 @@ h3, h4, b {
     align-content: flex-start;
 }
 /* Most popular section will take 1/3 of the available space */
+/* 60/30 to allow the rests for margin and padding etc. */
 .section-2 {
     margin: 0;
     padding: 0 30px 30px 30px;
@@ -367,13 +370,13 @@ h3, h4, b {
 .section-2 .S2-title i {
     align-self: baseline;
 }
-/* On tablet both sections will have the same width */
+/* tablet: both sections will have the same width (even though not specified in project notes) */
 @media all and (max-width: 992px) {
     .section-1, .section-2 {
         width: 50%;
     }
 }
-/* On mobile both sections are single columns and the most popular section is displayed first */
+/* most popular section is displayed above on mobile and both sections are single columns  */
 @media all and (max-width: 768px) {
     .main-section {
         padding: 0;
@@ -408,7 +411,7 @@ h3, h4, b {
     }
 }
 /* ------------- MINOR SECTION ------------------------------- */
-/* Encompasses the "Activities in Marseille" section */
+/* includes the "Activities in Marseille" section */
 /* ------------- Section 3: Activities ----------------------- */
 .minor-section {
     margin: 50px 30px;
@@ -423,7 +426,7 @@ h3, h4, b {
     justify-content: space-between;
     align-content: space-between;
 }
-/* Masonry layout realized using Flexbox column direction and height in % to control ratios */
+/*  using a Masonry (brick/ pinterest style) layout using Flexbox column direction and height in % to control ratios learnt from youtube */
 .activitiesBox {
     border-radius: 20px;
     box-shadow: 0 5px 5px 1px #dfdede;
