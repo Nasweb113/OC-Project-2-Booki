@@ -1,6 +1,6 @@
 # OC-Project-2-Booki
 
-Reservia
+
 Second project in the web developer course at OpenClassrooms. The aim is to integrate the mock-up of a holiday planning site called "Booki".
 
 Elements provided by the virtual company.
